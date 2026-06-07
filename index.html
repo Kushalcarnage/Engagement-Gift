@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Written in the Stars - Engagement Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="intro-screen">
+        <button id="enter-btn">Enter the Universe</button>
+    </div>
+
+    <div id="tutorial-screen" class="hidden">
+        <div class="tutorial-box">
+            <h2>Welcome to the Universe</h2>
+            <ul class="tutorial-steps">
+                <li><span>🖐️</span> <b>Explore:</b> Click and drag your screen to look around the galaxy.</li>
+                <li><span>✨</span> <b>Discover:</b> Click the large Golden Stars to enter a constellation.</li>
+                <li><span>▶️</span> <b>Sit Back:</b> Click "Play Story" for an automated, cinematic tour.</li>
+            </ul>
+            <button id="start-btn">Start Exploring</button>
+        </div>
+    </div>
+
+    <div id="ui-layer">
+        <h1>Written in the Stars</h1>
+        <p>Click the golden stars to explore memories</p>
+        <button id="play-story-btn">▶ Play Story Mode</button>
+    </div>
+
+    <div id="photo-modal" class="hidden">
+        <span id="close-modal">&times;</span>
+        <button id="prev-btn" class="nav-arrow">&#10094;</button>
+        <button id="next-btn" class="nav-arrow">&#10095;</button>
+        <img id="modal-image" src="" alt="Engagement Memory">
+        <h3 id="modal-caption">Caption goes here</h3>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="audio/bg-music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="chime-sound">
+        <source src="audio/chime.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="whoosh-sound">
+        <source src="audio/whoosh.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
